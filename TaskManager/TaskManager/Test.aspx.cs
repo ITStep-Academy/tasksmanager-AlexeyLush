@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,8 +12,6 @@ namespace TaskManager
         public int counter = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            count.Text = counter.ToString();
             if (Request.Cookies["counter"] == null)
             {
                 HttpCookie cookie = new HttpCookie("counter")
@@ -22,15 +19,15 @@ namespace TaskManager
                     Value = counter.ToString(),
                     Expires = DateTime.Now.AddDays(30)
                 };
-                //Response.Cookies["counter"].Value = counter.ToString();
-                //Response.Cookies["counter"].Expires = DateTime.Now.AddDays(30);
                 Response.SetCookie(cookie);
+                /*Response.Cookies["counter"].Value = counter.ToString();
+                Response.Cookies["counter"].Expires = DateTime.Now.AddDays(30);*/
             }
-
+                
             count.Text = Request.Cookies["counter"].Value.ToString();
         }
 
-        protected void button_Click(object sender, EventArgs e)
+        protected void increment_Click(object sender, EventArgs e)
         {
             counter = Int32.Parse(Request.Cookies["counter"].Value);
             counter++;

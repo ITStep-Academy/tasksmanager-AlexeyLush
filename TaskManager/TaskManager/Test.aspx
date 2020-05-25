@@ -11,7 +11,8 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="count" runat="server" Text="Label"></asp:Label>
-            <asp:Button ID="button" runat="server" Text="Click Me!" OnClick="button_Click" />
+            <br />
+            <asp:Button ID="increment" runat="server" Text="+1" OnClick="increment_Click" />
         </div>
     </form>
 </body>

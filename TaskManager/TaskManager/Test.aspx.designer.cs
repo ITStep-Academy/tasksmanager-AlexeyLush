@@ -33,12 +33,12 @@ namespace TaskManager
         protected global::System.Web.UI.WebControls.Label count;
 
         /// <summary>
-        /// button элемент управления.
+        /// increment элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button button;
+        protected global::System.Web.UI.WebControls.Button increment;
     }
 }
